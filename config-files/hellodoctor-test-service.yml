@@ -6,5 +6,5 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://hellodoctor-discovery-server:8761/eureka/
-  
+      defaultZone:
+        http://hellodoctor-discovery-server:8761/eureka/ 
