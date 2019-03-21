@@ -3,7 +3,7 @@ spring:
   zipkin:
     baseUrl: http://tracing-server:9411
   application:
-    name: hellodoctor-api-gateway
+    name: hellodoctor-test-service
     
 # Port of the Server
 server:
