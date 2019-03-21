@@ -1,10 +1,15 @@
+# Name of the Application
 spring:
   zipkin:
     baseUrl: http://tracing-server:9411
+  application:
+    name: hellodoctor-api-gateway
+    
+# Port of the Server
 server:
   port: 8081
 eureka:
   client:
     serviceUrl:
       defaultZone:
-        http://hellodoctor-discovery-server:8761/eureka/ 
+        http://hellodoctor-discovery-server:8761/eureka/
