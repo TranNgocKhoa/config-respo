@@ -12,7 +12,7 @@ eureka:
   client:
     serviceUrl:
       defaultZone:
-        http://hellodoctor-discovery-server:8761/eureka/
+        http://${DNS_DISCOVERY_SERVER}:8761/eureka/
         
 zuul:
   prefix: /api
