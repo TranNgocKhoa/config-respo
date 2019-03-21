@@ -1,8 +1,18 @@
 # Name of the Naming Server
-spring.application.name=hellodoctor-discovery-server
-# Default port of the naming server
-server.port=8761
-# Don't want to Server itselt to Register on the Naming Server
-eureka.client.register-with-eureka=false
-# Don't want to fetching a Registry
-eureka.client.fetch-registry=false
+spring:
+  application:
+    name: hellodoctor-discovery-server
+server:
+  port: 8761
+eureka:
+  instance:
+    hostname: localhost
+    health-check-url-path: /actuator/health
+    status-page-url-path: /actuator/info 
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+logging:
+  level:
+    com.netflix.discovery: 'OFF'
+    org.springframework.cloud: 'DEBUG'
