@@ -2,17 +2,18 @@
 spring:
   application:
     name: hellodoctor-api-gateway
-  cloud:
-    config:
-      uri: http://localhost:8888
 # Port of the Server
 server:
   port: 8765
-
-server.port=8765
 eureka:
   client:
     serviceUrl:
       defaultZone:
         http://hellodoctor-discovery-server:8761/eureka/
+        
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  routes:
+    hellodoctor-api-gateway: /gateway/**
         
