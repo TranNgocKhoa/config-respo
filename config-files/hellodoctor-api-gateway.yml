@@ -18,4 +18,4 @@ zuul:
   ignoredServices: '*'
   routes:
     hellodoctor-api-gateway: /gateway/**
-        
+    hellodoctor-test-service: /test/**
