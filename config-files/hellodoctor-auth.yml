@@ -1,10 +1,9 @@
-
 # Name of the Application
 spring:
   zipkin:
     baseUrl: http://tracing-server:9411
   application:
-    name: hellodoctor-test-service
+    name: hellodoctor-auth
 # Port of the Server
 server:
   port: 8083
