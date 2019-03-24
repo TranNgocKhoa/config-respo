@@ -17,3 +17,7 @@ spring:
   h2:
     console:
       enabled: true
+      
+# mapper file
+mybatis:
+  config-location: classpath:mapper.xml
