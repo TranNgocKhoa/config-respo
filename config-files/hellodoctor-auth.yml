@@ -4,6 +4,7 @@ spring:
     baseUrl: http://tracing-server:9411
   application:
     name: hellodoctor-auth
+      
 # Port of the Server
 server:
   port: 8083
@@ -12,3 +13,7 @@ eureka:
     serviceUrl:
       defaultZone:
         http://${DNS_DISCOVERY_SERVER}:8761/eureka/
+
+# mapper file
+mybatis:
+  config-location: classpath:mapper.xml
