@@ -4,6 +4,9 @@ spring:
     baseUrl: http://localhost:9411
   application:
     name: hellodoctor-auth
+  h2:
+  console:
+    enabled: true
 # Port of the Server
 server:
   port: 8083
@@ -12,11 +15,7 @@ eureka:
     serviceUrl:
       defaultZone:
         http://localhost:8761/eureka/
-spring:
-  h2:
-    console:
-      enabled: true
-      
+
 # mapper file
 mybatis:
   config-location: classpath:mapper.xml
