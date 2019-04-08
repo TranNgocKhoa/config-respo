@@ -1,0 +1,15 @@
+# Name of the Application
+spring:
+  zipkin:
+    baseUrl: http://tracing-server:9411
+  application:
+    name: hellodoctor-test-service
+
+# Port of the Server
+server:
+  port: 8086
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:
+        http://${DNS_DISCOVERY_SERVER}:8761/eureka/
