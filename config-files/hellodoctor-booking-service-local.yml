@@ -29,3 +29,6 @@ eureka:
 
 location-service:
   url: http://localhost:8080/api/location
+
+ribbon.eager-load:
+  enabled: true
