@@ -1,7 +1,7 @@
 # Name of the Application
 spring:
   zipkin:
-    baseUrl: http://localhost:9411
+    baseUrl: http://tracing-server:9411
   application:
     name: hellodoctor-booking-service
   jpa:
@@ -24,9 +24,9 @@ eureka:
   client:
     serviceUrl:
       defaultZone:
-        http://localhost:8761/eureka/
+        http://${DNS_DISCOVERY_SERVER}:8761/eureka/
 
 
 location-service:
-  url: http://localhost:8080/api/location
+  url: http://hellodoctor-api-gateway:8080/api/location
 
