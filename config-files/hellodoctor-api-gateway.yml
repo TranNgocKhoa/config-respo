@@ -22,3 +22,4 @@ zuul:
     hellodoctor-test-service: /test/**
     hellodoctor-auth: /auth/**
     hellodoctor-location-service: /location/**
+    hellodoctor-booking-service: /booking/**
