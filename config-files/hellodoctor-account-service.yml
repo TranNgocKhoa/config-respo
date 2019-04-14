@@ -1,20 +1,20 @@
 # Name of the Application
 spring:
   zipkin:
-    baseUrl: http://localhost:9411
+    baseUrl: http://tracing-server:9411
   application:
     name: hellodoctor-account-service
   jpa:
     hibernate:
       ddl-auto: none
   datasource:
-    url: jdbc:mysql://localhost:3306/grabdoctor?useSSL=false
+    url: jdbc:mysql://35.247.128.219:3306/grabdoctor?useSSL=false
     username: root
     password: 12345
     driver-class-name: com.mysql.cj.jdbc.Driver
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
 
 # Port of the Server
@@ -24,4 +24,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone:
-        http://localhost:8761/eureka/
+        http://${DNS_DISCOVERY_SERVER}:8761/eureka/
+
+location-service:
+  url: http://hellodoctor-api-gateway:8080/api/location
+
