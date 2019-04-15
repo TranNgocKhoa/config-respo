@@ -23,3 +23,4 @@ zuul:
     hellodoctor-auth: /auth/**
     hellodoctor-location-service: /location/**
     hellodoctor-booking-service: /booking/**
+    hellodoctor-account-service: /account/
