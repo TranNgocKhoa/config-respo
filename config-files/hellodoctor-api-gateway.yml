@@ -21,6 +21,7 @@ zuul:
     hellodoctor-api-gateway: /gateway/**
     hellodoctor-test-service: /test/**
     hellodoctor-auth: /auth/**
+    hellodoctor-auth2: /auth2/**
     hellodoctor-location-service: /location/**
     hellodoctor-booking-service: /booking/**
     hellodoctor-account-service: /account/**
