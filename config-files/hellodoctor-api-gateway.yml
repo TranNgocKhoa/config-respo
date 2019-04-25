@@ -17,6 +17,7 @@ eureka:
 zuul:
   prefix: /api
   ignoredServices: '*'
+  sensitiveHeaders: Cookie,Set-Cookie
   routes:
     hellodoctor-api-gateway: /gateway/**
     hellodoctor-test-service: /test/**
