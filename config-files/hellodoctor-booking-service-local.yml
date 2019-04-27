@@ -17,6 +17,9 @@ spring:
         dialect: org.hibernate.dialect.MySQL5Dialect
     show-sql: true
 
+mybatis:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+
 # Port of the Server
 server:
   port: 8084
