@@ -17,6 +17,9 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
     show-sql: true
 
+account-service:
+  url: http://hellodoctor-api-gateway:8080/api/account
+
 # Port of the Server
 server:
   port: 8088
