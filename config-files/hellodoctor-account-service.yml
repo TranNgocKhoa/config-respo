@@ -29,4 +29,3 @@ eureka:
 
 location-service:
   url: http://hellodoctor-api-gateway:8080/api/location
-
