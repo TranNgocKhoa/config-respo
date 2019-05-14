@@ -1,0 +1,28 @@
+# Name of the Application
+spring:
+  zipkin:
+    baseUrl: http://localhost:9411
+  application:
+    name: hellodoctor-api-gateway
+
+# Port of the Server
+server:
+  port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:
+        http://localhost:8761/eureka/
+
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    hellodoctor-api-gateway: /gateway/**
+    hellodoctor-test-service: /test/**
+    hellodoctor-auth: /auth/**
+    hellodoctor-auth2: /auth2/**
+    hellodoctor-location-service: /location/**
+    hellodoctor-booking-service: /booking/**
+    hellodoctor-account-service: /account/**
