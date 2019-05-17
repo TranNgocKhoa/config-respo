@@ -8,12 +8,12 @@ spring:
 # Port of the Server
 server:
   port: 8080
-  ssl:
-    key-alias: selfsigned_localhost_sslserver
-    key-password: changeit
-    key-store: classpath:ssl-server.jks
-    key-store-provider: SUN
-    key-store-type: JKS
+#  ssl:
+#    key-alias: selfsigned_localhost_sslserver
+#    key-password: changeit
+#    key-store: classpath:ssl-server.jks
+#    key-store-provider: SUN
+#    key-store-type: JKS
 eureka:
   client:
     serviceUrl:
