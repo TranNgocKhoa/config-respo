@@ -31,3 +31,10 @@ eureka:
 
 location-service:
   url: http://localhost:8080/api/location
+
+log4j:
+  logger:
+    com:
+      hellodoctor:
+        booking:
+          repository: DEBUG
