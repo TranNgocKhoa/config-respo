@@ -10,10 +10,10 @@ spring:
 server:
   port: 8443
   ssl:
-    key-alias: hellodoctor
-    key-password: 12345
-    key-store-password: 12345
-    key-store: classpath:ssl-key.p12
+    key-alias: NgocKhoaTran-2019-06-04-105151
+    key-password: password
+    key-store-password: password
+    key-store: classpath:NgocKhoaTran-2019-06-04-105151.p12
     key-store-type: PKCS12
 eureka:
   client:
