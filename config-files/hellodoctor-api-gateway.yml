@@ -7,7 +7,7 @@ spring:
     
 # Port of the Server
 server:
-  port: 8443
+  port: 443
   ssl:
     enabled: true
     key-password: 12345
