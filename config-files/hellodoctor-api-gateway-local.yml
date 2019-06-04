@@ -11,7 +11,7 @@ server:
   port: 8443
   ssl:
     key-alias: hellodoctor
-    key-password: password
+    key-password: 12345
     key-store-password: password
     key-store: classpath:ssl-key-og.p12
     key-store-type: PKCS12
