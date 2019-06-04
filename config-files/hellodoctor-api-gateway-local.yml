@@ -13,7 +13,7 @@ server:
     key-alias: NgocKhoaTran-2019-06-04-105151
     key-password: password
     key-store-password: password
-    key-store: classpath:NgocKhoaTran-2019-06-04-105151.p12
+    key-store: classpath:gegat.p12
     key-store-type: PKCS12
 eureka:
   client:
