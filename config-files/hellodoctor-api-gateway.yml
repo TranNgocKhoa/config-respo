@@ -7,10 +7,9 @@ spring:
     
 # Port of the Server
 server:
-  port: 443
+  port: 8443
   ssl:
     enabled: true
-    key-alias: selfsigned_localhost_sslserver
     key-password: 12345
     key-store: classpath:ssl-key.p12
     key-store-type: PKCS12
