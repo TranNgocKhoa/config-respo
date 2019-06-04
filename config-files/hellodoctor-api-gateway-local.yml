@@ -10,7 +10,7 @@ spring:
 server:
   port: 8443
   ssl:
-    key-alias: ongame
+    key-alias: ongame.vn
     key-password: 12345
     key-store: classpath:ssl-key.p12
     key-store-type: PKCS12
