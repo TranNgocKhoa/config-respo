@@ -9,10 +9,10 @@ spring:
 server:
   port: 443
   ssl:
+    enabled: true
     key-alias: selfsigned_localhost_sslserver
     key-password: 12345
-    key-store: classpath*:ssl-key.p12
-    key-store-provider: SUN
+    key-store: classpath:ssl-key.p12
     key-store-type: PKCS12
 eureka:
   client:
