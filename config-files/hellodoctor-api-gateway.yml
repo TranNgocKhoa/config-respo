@@ -11,7 +11,7 @@ server:
   ssl:
     key-alias: selfsigned_localhost_sslserver
     key-password: 12345
-    key-store: classpath:ssl-key.p12
+    key-store: classpath*:ssl-key.p12
     key-store-provider: SUN
     key-store-type: PKCS12
 eureka:
