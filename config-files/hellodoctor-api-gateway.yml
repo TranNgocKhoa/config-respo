@@ -6,12 +6,20 @@ spring:
     name: hellodoctor-api-gateway
     
 # Port of the Server
+# server:
+#   port: 8443
+#   ssl:
+#     key-alias: ongame
+#     key-password: 12345
+#     key-store: classpath:ssl-key.p12
+#     key-store-type: PKCS12
 server:
   port: 8443
   ssl:
-    key-alias: ongame
+    key-alias: hellodoctor
     key-password: 12345
-    key-store: classpath:ssl-key.p12
+    key-store-password: 12345
+    key-store: classpath:ssl-key-og.p12
     key-store-type: PKCS12
 eureka:
   client:
