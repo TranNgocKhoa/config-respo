@@ -19,7 +19,7 @@ server:
     key-alias: hellodoctor
     key-password: 12345
     key-store-password: 12345
-    key-store: classpath:ssl-key-og.p12
+    key-store: classpath:hello-key.p12
     key-store-type: PKCS12
 eureka:
   client:
