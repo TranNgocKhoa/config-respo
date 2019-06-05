@@ -7,6 +7,8 @@ spring:
 
 # Port of the Server
 # Port of the Server
+http:
+  port: 8080
 server:
   port: 8443
   ssl:
