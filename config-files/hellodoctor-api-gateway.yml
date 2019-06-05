@@ -13,6 +13,8 @@ spring:
 #     key-password: 12345
 #     key-store: classpath:ssl-key.p12
 #     key-store-type: PKCS12
+http:
+  port: 8080
 server:
   port: 8443
   ssl:
