@@ -7,9 +7,10 @@ spring:
 
 # Port of the Server
 # Port of the Server
-http:
-  port: 8080
+
 server:
+  http:
+    port: 8080
   port: 8443
   ssl:
     key-alias: hellodoctor
