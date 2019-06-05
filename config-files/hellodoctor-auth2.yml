@@ -19,7 +19,7 @@ spring:
     show-sql: true
 
 account-service:
-  url: http://hellodoctor-api-gateway:8080/api/account
+  url: https://hellodoctor-api-gateway:8443/api/account
 
 # Port of the Server
 server:
