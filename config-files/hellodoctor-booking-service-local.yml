@@ -31,6 +31,8 @@ eureka:
 
 location-service:
   url: http://localhost:8080/api/location
+push-service:
+  url: http://localhost:8080/api/push
 
 logging:
   level:
