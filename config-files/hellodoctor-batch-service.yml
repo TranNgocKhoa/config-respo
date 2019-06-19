@@ -26,4 +26,7 @@ eureka:
     serviceUrl:
       defaultZone:
         http://${DNS_DISCOVERY_SERVER}:8761/eureka/
+        
+push-service:
+  url: http://hellodoctor-api-gateway:8080/api/push
 
