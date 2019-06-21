@@ -43,6 +43,7 @@ zuul:
     hellodoctor-booking-service: /booking/**
     hellodoctor-account-service: /account/**
     hellodoctor-push-service: /push/**
+    hellodoctor-storage-service: /storage/**
 
 ribbon:
   ReadTimeout: 5000
