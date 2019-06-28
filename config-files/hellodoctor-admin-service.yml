@@ -1,0 +1,38 @@
+# Name of the Application
+spring:
+  zipkin:
+    baseUrl: http://tracing-server:9411
+  application:
+    name: hellodoctor-admin-service
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    # I'm sorry but don't waste your time =)))))))))))))
+    url: jdbc:mysql://35.247.128.219:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
+    username: root
+    password: 12345
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+
+mybatis:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+
+# Port of the Server
+server:
+  port: 8084
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:
+        http://${DNS_DISCOVERY_SERVER}:8761/eureka/
+
+
+location-service:
+  url: http://hellodoctor-api-gateway:8080/api/location
+push-service:
+  url: http://hellodoctor-api-gateway:8080/api/push
+
