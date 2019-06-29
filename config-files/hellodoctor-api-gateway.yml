@@ -48,6 +48,7 @@ zuul:
     hellodoctor-account-service: /account/**
     hellodoctor-push-service: /push/**
     hellodoctor-storage-service: /storage/**
+    hellodoctor-admin-service: /admin/**
 
 ribbon:
   ReadTimeout: 5000
