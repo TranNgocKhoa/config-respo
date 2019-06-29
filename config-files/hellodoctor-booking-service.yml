@@ -32,7 +32,8 @@ eureka:
 
 
 location-service:
-  url: http://hellodoctor-api-gateway:8080/api/location
+  # url: http://hellodoctor-api-gateway:8080/api/location
+  url: http://hellodoctor-location-service:${LOCAT_SERVIC_PORT_PUBLIS}
 push-service:
   url: http://hellodoctor-api-gateway:8080/api/push
 
