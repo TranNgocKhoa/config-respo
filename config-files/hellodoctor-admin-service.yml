@@ -20,7 +20,7 @@ spring:
 
 datasource:
   master:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     jdbc-url: jdbc:mysql://35.247.128.219:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
     username: root
     password: 12345
@@ -34,7 +34,7 @@ datasource:
       prepStmtCacheSqlLimit: 2048
       useServerPrepStmts: true
   slave1:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     jdbcUrl: jdbc:mysql://35.240.223.89:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
     username: root
     password: 12345
@@ -48,7 +48,7 @@ datasource:
       prepStmtCacheSqlLimit: 2048
       useServerPrepStmts: true
   slave2:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     jdbcUrl: jdbc:mysql:/35.197.134.191:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
     username: root
     password: 12345
