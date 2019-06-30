@@ -22,7 +22,7 @@ mybatis:
 
 # Port of the Server
 server:
-  port: 8084
+  port: 8081
 eureka:
   client:
     serviceUrl:
