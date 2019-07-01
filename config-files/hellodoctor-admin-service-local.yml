@@ -7,15 +7,60 @@ spring:
   jpa:
     hibernate:
       ddl-auto: none
-  datasource:
-    url: jdbc:mysql:replication://35.247.128.219:3306,35.240.223.89:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
+#  datasource:
+#    # I'm sorry but don't waste your time =)))))))))))))
+#    url: jdbc:mysql:replication://35.247.128.219:3306,35.240.223.89:3306,35.197.134.191:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
+#    username: root
+#    password: 12345
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+#    show-sql: true
+
+datasource:
+  master:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbc-url: jdbc:mysql://35.247.128.219:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
     username: root
     password: 12345
+    minimum-idle: 20
+    maximum-pool-size: 20
+    connection-timeout: 3000
+    pool-name: HD-Master-Pool
+    data-source-properties:
+      cachePrepStmts: true
+      prepStmtCacheSize: 250
+      prepStmtCacheSqlLimit: 2048
+      useServerPrepStmts: true
+  slave1:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL5Dialect
-    show-sql: true
+    jdbcUrl: jdbc:mysql://35.240.223.89:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
+    username: root
+    password: 12345
+    minimum-idle: 20
+    maximum-pool-size: 20
+    connection-timeout: 3000
+    pool-name: HD-Slave1-Pool
+    data-source-properties:
+      cachePrepStmts: true
+      prepStmtCacheSize: 250
+      prepStmtCacheSqlLimit: 2048
+      useServerPrepStmts: true
+  slave2:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    jdbcUrl: jdbc:mysql://35.197.134.191:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
+    username: root
+    password: 12345
+    minimum-idle: 20
+    maximum-pool-size: 20
+    connection-timeout: 3000
+    pool-name: HD-Slave2-Pool
+    data-source-properties:
+      cachePrepStmts: true
+      prepStmtCacheSize: 250
+      prepStmtCacheSqlLimit: 2048
+      useServerPrepStmts: true
 
 mybatis:
   mapper-locations: classpath*:/mapper/*Mapper.xml
@@ -29,14 +74,9 @@ eureka:
       defaultZone:
         http://localhost:8761/eureka/
 
-location-service:
-  url: http://localhost:8080/api/location
-push-service:
-  url: http://localhost:8080/api/push
 
-logging:
-  level:
-    com:
-      hellodoctor:
-        booking:
-          repository: DEBUG
+location-service:
+  url: http://hellodoctor-api-gateway:8080/api/location
+push-service:
+  url: http://hellodoctor-api-gateway:8080/api/push
+
