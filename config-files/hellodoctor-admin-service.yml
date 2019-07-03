@@ -33,7 +33,7 @@ datasource:
       prepStmtCacheSize: 250
       prepStmtCacheSqlLimit: 2048
       useServerPrepStmts: true
-  slave1:
+  slave[0]:
     driver-class-name: com.mysql.cj.jdbc.Driver
     jdbcUrl: jdbc:mysql://35.240.223.89:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
     username: root
@@ -47,7 +47,7 @@ datasource:
       prepStmtCacheSize: 250
       prepStmtCacheSqlLimit: 2048
       useServerPrepStmts: true
-  slave2:
+  slave[1]:
     driver-class-name: com.mysql.cj.jdbc.Driver
     jdbcUrl: jdbc:mysql://35.197.134.191:3306/grabdoctor?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh
     username: root
