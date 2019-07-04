@@ -17,7 +17,7 @@ eureka:
 
 # Redis
 redis:
-  host: redis-server
+  host: ${DNS_REDIS_SERVER}
   port: 6379
   password:
   timeout: 5000
