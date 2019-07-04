@@ -13,3 +13,19 @@ eureka:
     serviceUrl:
       defaultZone:
         http://${DNS_DISCOVERY_SERVER}:8761/eureka/
+
+
+# Redis
+redis:
+  host: redis-server
+  port: 6379
+  password:
+  timeout: 5000
+  max-active: 200
+  min-idle: 50
+  max-idle: 50
+  max-wait: 3000
+
+
+
+
