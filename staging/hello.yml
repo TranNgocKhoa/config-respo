@@ -1,2 +1,4 @@
 
-This is configuartion for development profile
+info:
+  message: "Testing my Config Server"
+  status: "It workedThis is configuartion for development profile"
