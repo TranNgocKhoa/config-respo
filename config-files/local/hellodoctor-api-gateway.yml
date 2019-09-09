@@ -1,0 +1,31 @@
+# Name of the Application
+spring:
+  application:
+    name: hellodoctor-api-gateway
+server:
+  http:
+    port: 8080
+eureka:
+  client:
+    serviceUrl:
+      defaultZone:
+        http://localhost:8761/eureka/
+
+zuul:
+  prefix: /api
+  ignoredServices: '*'
+  sensitiveHeaders: Cookie,Set-Cookie
+  routes:
+    hellodoctor-api-gateway: /gateway/**
+    hellodoctor-test-service: /test/**
+    hellodoctor-auth: /auth/**
+    hellodoctor-auth2: /auth2/**
+    hellodoctor-location-service: /location/**
+    hellodoctor-booking-service: /booking/**
+    hellodoctor-account-service: /account/**
+    hellodoctor-push-service: /push/**
+    hellodoctor-storage-service: /storage/**
+    hellodoctor-admin-service: /admin/**
+
+ribbon:
+  ReadTimeout: 5000
